@@ -1,4 +1,4 @@
-### What is it?
+## What is it?
 This simple converter app can take in multiple .png or .jpg files and convert them over to individual .pdf files.
 
 ### How to use

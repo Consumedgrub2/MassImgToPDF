@@ -67,7 +67,7 @@
             // 
             menu_barSettings.DisplayStyle = ToolStripItemDisplayStyle.Text;
             menu_barSettings.Name = "menu_barSettings";
-            menu_barSettings.Size = new Size(270, 34);
+            menu_barSettings.Size = new Size(178, 34);
             menu_barSettings.Text = "Settings";
             menu_barSettings.Click += menu_barSettings_Click;
             // 
@@ -75,7 +75,7 @@
             // 
             menu_barQuit.DisplayStyle = ToolStripItemDisplayStyle.Text;
             menu_barQuit.Name = "menu_barQuit";
-            menu_barQuit.Size = new Size(270, 34);
+            menu_barQuit.Size = new Size(178, 34);
             menu_barQuit.Text = "Quit";
             menu_barQuit.Click += menu_barQuit_Click;
             // 

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MassImgToPDF;
+using iText;
+using iText.Kernel.Pdf;
 
 namespace MassImgToPDF
 {
@@ -14,7 +16,7 @@ namespace MassImgToPDF
 
         private void mainWindow_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void openFilesButton_Click(object sender, EventArgs e)

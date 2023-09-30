@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MassImgToPDF;
-using MassImgToPDF.settings;
 using System.Drawing.Design;
+using MassImgToPDF.main.settings;
 
 namespace MassImgToPDF
 {

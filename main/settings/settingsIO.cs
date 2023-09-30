@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration.Ini;
 using System.Diagnostics;
 using Microsoft.Extensions.FileProviders;
 
-namespace MassImgToPDF.settings
+namespace MassImgToPDF.main.settings
 {
     internal static class settingsIO
     {

@@ -108,8 +108,8 @@
             // 
             // settingsWindow
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(678, 164);
             Controls.Add(applySettingsButton);
             Controls.Add(cancelSettingsButton);

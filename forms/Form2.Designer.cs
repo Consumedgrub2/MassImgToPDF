@@ -52,8 +52,8 @@
             // 
             // aboutWindow
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(318, 204);
             Controls.Add(versionTitle);
             Controls.Add(programTitle);

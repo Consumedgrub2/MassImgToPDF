@@ -35,14 +35,16 @@
             cancelSettingsButton = new Button();
             applySettingsButton = new Button();
             folderBrowserDialog1 = new FolderBrowserDialog();
+            settingsPanel = new Panel();
             settingsBox1.SuspendLayout();
+            settingsPanel.SuspendLayout();
             SuspendLayout();
             // 
             // settingsBox1
             // 
             settingsBox1.Controls.Add(chooseOutputPathButton);
             settingsBox1.Controls.Add(outputPathTextBox);
-            settingsBox1.Location = new Point(12, 12);
+            settingsBox1.Location = new Point(14, 13);
             settingsBox1.Name = "settingsBox1";
             settingsBox1.Size = new Size(654, 78);
             settingsBox1.TabIndex = 0;
@@ -70,7 +72,7 @@
             // 
             // okSettingsButton
             // 
-            okSettingsButton.Location = new Point(318, 118);
+            okSettingsButton.Location = new Point(320, 119);
             okSettingsButton.Name = "okSettingsButton";
             okSettingsButton.Size = new Size(112, 34);
             okSettingsButton.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             // cancelSettingsButton
             // 
-            cancelSettingsButton.Location = new Point(436, 118);
+            cancelSettingsButton.Location = new Point(438, 119);
             cancelSettingsButton.Name = "cancelSettingsButton";
             cancelSettingsButton.Size = new Size(112, 34);
             cancelSettingsButton.TabIndex = 2;
@@ -93,7 +95,7 @@
             // applySettingsButton
             // 
             applySettingsButton.Enabled = false;
-            applySettingsButton.Location = new Point(554, 118);
+            applySettingsButton.Location = new Point(556, 119);
             applySettingsButton.Name = "applySettingsButton";
             applySettingsButton.Size = new Size(112, 34);
             applySettingsButton.TabIndex = 3;
@@ -106,15 +108,24 @@
             // 
             folderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer;
             // 
+            // settingsPanel
+            // 
+            settingsPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            settingsPanel.Controls.Add(okSettingsButton);
+            settingsPanel.Controls.Add(settingsBox1);
+            settingsPanel.Controls.Add(applySettingsButton);
+            settingsPanel.Controls.Add(cancelSettingsButton);
+            settingsPanel.Location = new Point(-2, -1);
+            settingsPanel.Name = "settingsPanel";
+            settingsPanel.Size = new Size(680, 167);
+            settingsPanel.TabIndex = 4;
+            // 
             // settingsWindow
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(678, 164);
-            Controls.Add(applySettingsButton);
-            Controls.Add(cancelSettingsButton);
-            Controls.Add(okSettingsButton);
-            Controls.Add(settingsBox1);
+            Controls.Add(settingsPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MaximumSize = new Size(700, 220);
@@ -128,6 +139,7 @@
             TopMost = true;
             settingsBox1.ResumeLayout(false);
             settingsBox1.PerformLayout();
+            settingsPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -140,5 +152,6 @@
         private Button cancelSettingsButton;
         private Button applySettingsButton;
         private FolderBrowserDialog folderBrowserDialog1;
+        private Panel settingsPanel;
     }
 }

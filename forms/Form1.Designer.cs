@@ -40,8 +40,10 @@
             convertButton = new Button();
             openFilesButton = new Button();
             openFileDialog1 = new OpenFileDialog();
+            mainPanel = new Panel();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
+            mainPanel.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -51,6 +53,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.System;
             menuStrip1.Size = new Size(678, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
@@ -98,9 +101,9 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(selectedFilesView);
-            groupBox1.Location = new Point(12, 45);
+            groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(536, 387);
+            groupBox1.Size = new Size(545, 393);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Image List View";
@@ -112,14 +115,14 @@
             selectedFilesView.ItemHeight = 25;
             selectedFilesView.Location = new Point(6, 30);
             selectedFilesView.Name = "selectedFilesView";
-            selectedFilesView.Size = new Size(524, 352);
+            selectedFilesView.Size = new Size(533, 352);
             selectedFilesView.TabIndex = 0;
             selectedFilesView.TabStop = false;
             selectedFilesView.UseTabStops = false;
             // 
             // convertButton
             // 
-            convertButton.Location = new Point(554, 335);
+            convertButton.Location = new Point(554, 299);
             convertButton.Name = "convertButton";
             convertButton.Size = new Size(112, 97);
             convertButton.TabIndex = 2;
@@ -130,7 +133,7 @@
             // openFilesButton
             // 
             openFilesButton.Image = (Image)resources.GetObject("openFilesButton.Image");
-            openFilesButton.Location = new Point(554, 295);
+            openFilesButton.Location = new Point(554, 259);
             openFilesButton.Name = "openFilesButton";
             openFilesButton.Size = new Size(112, 34);
             openFilesButton.TabIndex = 3;
@@ -145,16 +148,26 @@
             openFileDialog1.Filter = "PNG files (*.png)|*.png|JPG files (*.jpg)|*.jpg";
             openFileDialog1.Multiselect = true;
             // 
+            // mainPanel
+            // 
+            mainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            mainPanel.Controls.Add(openFilesButton);
+            mainPanel.Controls.Add(groupBox1);
+            mainPanel.Controls.Add(convertButton);
+            mainPanel.Location = new Point(0, 36);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(678, 408);
+            mainPanel.TabIndex = 4;
+            // 
             // mainWindow
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(678, 444);
-            Controls.Add(openFilesButton);
-            Controls.Add(convertButton);
-            Controls.Add(groupBox1);
+            Controls.Add(mainPanel);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MaximumSize = new Size(700, 500);
@@ -165,6 +178,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
+            mainPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +196,6 @@
         private Button openFilesButton;
         private ListBox selectedFilesView;
         private OpenFileDialog openFileDialog1;
+        private Panel mainPanel;
     }
 }

@@ -6,14 +6,21 @@ using Microsoft.Extensions.Configuration.Ini;
 using System.Diagnostics;
 using MassImgToPDF.main.settings;
 
-namespace MassImgToPDF
+namespace MassImgToPDF.main
 {
     internal static class Program
     {
+        public enum programStatus
+        {
+            Idle,
+            Busy,
+            Done
+        }
+
         [STAThread]
         static void Main()
         {
-            settingsIO.loadSettings();
+            SettingsIO.loadSettings();
             ApplicationConfiguration.Initialize();
             Application.Run(new mainWindow());
         }

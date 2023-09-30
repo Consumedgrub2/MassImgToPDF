@@ -41,6 +41,7 @@
             openFilesButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             mainPanel = new Panel();
+            statusLabel = new Label();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             mainPanel.SuspendLayout();
@@ -129,6 +130,7 @@
             convertButton.TabStop = false;
             convertButton.Text = "Convert";
             convertButton.UseVisualStyleBackColor = true;
+            convertButton.Click += convertButton_Click;
             // 
             // openFilesButton
             // 
@@ -145,12 +147,13 @@
             // 
             // openFileDialog1
             // 
-            openFileDialog1.Filter = "PNG files (*.png)|*.png|JPG files (*.jpg)|*.jpg";
+            openFileDialog1.Filter = "PNG & JPG files (*.png *.jpg)|*.png; *.jpg";
             openFileDialog1.Multiselect = true;
             // 
             // mainPanel
             // 
             mainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            mainPanel.Controls.Add(statusLabel);
             mainPanel.Controls.Add(openFilesButton);
             mainPanel.Controls.Add(groupBox1);
             mainPanel.Controls.Add(convertButton);
@@ -158,6 +161,15 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(678, 408);
             mainPanel.TabIndex = 4;
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new Point(554, 231);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(98, 25);
+            statusLabel.TabIndex = 4;
+            statusLabel.Text = "Status: Idle";
             // 
             // mainWindow
             // 
@@ -179,6 +191,7 @@
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             mainPanel.ResumeLayout(false);
+            mainPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,5 +210,6 @@
         private ListBox selectedFilesView;
         private OpenFileDialog openFileDialog1;
         private Panel mainPanel;
+        private Label statusLabel;
     }
 }

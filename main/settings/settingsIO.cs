@@ -8,7 +8,7 @@ using Microsoft.Extensions.FileProviders;
 
 namespace MassImgToPDF.main.settings
 {
-    internal static class settingsIO
+    internal static class SettingsIO
     {
         //Main variables
         private static string configDirectoryPath = "";

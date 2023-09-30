@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MassImgToPDF;
-using System.Drawing.Design;
 using MassImgToPDF.main.settings;
 
 namespace MassImgToPDF
@@ -15,13 +14,13 @@ namespace MassImgToPDF
         public settingsWindow()
         {
             InitializeComponent();
-            outputPathTextBox.Text = settingsIO.outputPath;
+            outputPathTextBox.Text = SettingsIO.outputPath;
         }
 
         private void outputPathTextBox_TextChanged(object sender, EventArgs e)
         {
             currentOutputPathTextBoxText = outputPathTextBox.Text;
-            if (outputPathTextBox.Text != settingsIO.outputPath)
+            if (outputPathTextBox.Text != SettingsIO.outputPath)
             {
                 applySettingsButton.Enabled = true;
             }
@@ -43,7 +42,7 @@ namespace MassImgToPDF
 
         public void applySettings()
         {
-            settingsIO.writeSettings();
+            SettingsIO.writeSettings();
         }
 
         private void cancelSettingsButton_Click(object sender, EventArgs e)

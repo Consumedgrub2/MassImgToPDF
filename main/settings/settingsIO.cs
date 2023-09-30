@@ -25,7 +25,7 @@ namespace MassImgToPDF.main.settings
             string[] config = new string[]
             {
                     "[AppSettings]",
-                    "outputPath=" + Environment.ProcessPath + @"\PDFOutput"
+                    "outputPath=" + Directory.GetCurrentDirectory()
             };
 
             if (!Path.Exists(configDirectoryPath))

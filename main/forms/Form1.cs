@@ -65,7 +65,7 @@ namespace MassImgToPDF
 
         public void setStatusToIdle(object? sender, ElapsedEventArgs e)
         {
-            //Research
+            //Research this
             statusLabel.Invoke((MethodInvoker)(() =>
             {
                 statusLabel.Text = "Status: " + Program.programStatus.Idle.ToString();

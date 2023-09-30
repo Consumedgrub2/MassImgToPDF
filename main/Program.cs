@@ -10,6 +10,7 @@ namespace MassImgToPDF.main
 {
     internal static class Program
     {
+        //Program Status for later async code
         public enum programStatus
         {
             Idle,

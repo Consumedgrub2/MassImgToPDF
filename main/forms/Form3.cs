@@ -40,9 +40,16 @@ namespace MassImgToPDF
             }
         }
 
-        public void ApplySettings()
+        public bool ApplySettings()
         {
+            if (!Path.Exists(currentOutputPathTextBoxText))
+            {
+                MessageBox.Show("Invalid output path!", "MassImgToPDF Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             SettingsIO.WriteSettings();
+            return true;
         }
 
         private void cancelSettingsButton_Click(object sender, EventArgs e)
@@ -52,15 +59,19 @@ namespace MassImgToPDF
 
         private void applySettingsButton_Click(object sender, EventArgs e)
         {
-            ApplySettings();
-            applySettingsButton.Enabled = false;
+            if (ApplySettings())
+            {
+                applySettingsButton.Enabled = false;
+            }
         }
 
         private void okSettingsButton_Click(object sender, EventArgs e)
         {
-            ApplySettings();
-            applySettingsButton.Enabled = false;
-            this.Close();
+            if (ApplySettings())
+            {
+                applySettingsButton.Enabled = false;
+                this.Close();
+            }
         }
     }
 }

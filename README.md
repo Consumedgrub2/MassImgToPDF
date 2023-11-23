@@ -1,3 +1,5 @@
+<img align = "center" src = "https://raw.githubusercontent.com/Consumedgrub2/MassImgToPDF/master/Icon_128x128.png"></img>
+
 ## What is it?
 This simple converter app can take in multiple individual .png or .jpg files and convert them over to individual .pdf files.
 

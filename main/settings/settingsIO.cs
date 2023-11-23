@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
+﻿//using System;
+//using System.IO;
+//using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Ini;
-using System.Diagnostics;
-using Microsoft.Extensions.FileProviders;
+//using Microsoft.Extensions.Configuration.Ini;
+//using System.Diagnostics;
+//using Microsoft.Extensions.FileProviders;
 
 namespace MassImgToPDF.main.settings
 {
@@ -17,7 +17,7 @@ namespace MassImgToPDF.main.settings
         //Settings variables
         public static string outputPath = "";
 
-        public static void loadSettings()
+        public static void LoadSettings()
         {
             configDirectoryPath = Directory.GetCurrentDirectory() + @"\config";
             configPath = configDirectoryPath + @"\config.ini";
@@ -48,10 +48,10 @@ namespace MassImgToPDF.main.settings
             outputPath = configurationRoot["AppSettings:outputPath"] ?? Directory.GetCurrentDirectory();
         }
 
-        public static void writeSettings()
+        public static void WriteSettings()
         {
             //Write in-memory settings
-            outputPath = settingsWindow.currentOutputPathTextBoxText;
+            outputPath = SettingsWindow.currentOutputPathTextBoxText;
 
             //Write to storage
             string[] config = new string[]

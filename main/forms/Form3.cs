@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-using MassImgToPDF;
+﻿//using System;
+//using System.Collections.Generic;
+//using Microsoft.Extensions.Configuration;
+//using MassImgToPDF;
 using MassImgToPDF.main.settings;
 
 namespace MassImgToPDF
 {
-    public partial class settingsWindow : Form
+    public partial class SettingsWindow : Form
     {
         //Settings variables
         public static string currentOutputPathTextBoxText = "";
 
-        public settingsWindow()
+        public SettingsWindow()
         {
             InitializeComponent();
             outputPathTextBox.Text = SettingsIO.outputPath;
@@ -40,9 +40,9 @@ namespace MassImgToPDF
             }
         }
 
-        public void applySettings()
+        public void ApplySettings()
         {
-            SettingsIO.writeSettings();
+            SettingsIO.WriteSettings();
         }
 
         private void cancelSettingsButton_Click(object sender, EventArgs e)
@@ -52,13 +52,13 @@ namespace MassImgToPDF
 
         private void applySettingsButton_Click(object sender, EventArgs e)
         {
-            applySettings();
+            ApplySettings();
             applySettingsButton.Enabled = false;
         }
 
         private void okSettingsButton_Click(object sender, EventArgs e)
         {
-            applySettings();
+            ApplySettings();
             applySettingsButton.Enabled = false;
             this.Close();
         }

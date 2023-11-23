@@ -1,6 +1,6 @@
 ﻿namespace MassImgToPDF
 {
-    partial class mainWindow
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             menu_barSettings = new ToolStripMenuItem();
@@ -95,8 +95,8 @@
             // 
             menu_barVersion.DisplayStyle = ToolStripItemDisplayStyle.Text;
             menu_barVersion.Name = "menu_barVersion";
-            menu_barVersion.Size = new Size(172, 34);
-            menu_barVersion.Text = "Version";
+            menu_barVersion.Size = new Size(270, 34);
+            menu_barVersion.Text = "About";
             menu_barVersion.Click += menu_barVersion_Click;
             // 
             // groupBox1
@@ -104,7 +104,7 @@
             groupBox1.Controls.Add(selectedFilesView);
             groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(545, 393);
+            groupBox1.Size = new Size(544, 393);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Image List View";
@@ -123,9 +123,9 @@
             // 
             // convertButton
             // 
-            convertButton.Location = new Point(554, 299);
+            convertButton.Location = new Point(554, 300);
             convertButton.Name = "convertButton";
-            convertButton.Size = new Size(112, 97);
+            convertButton.Size = new Size(112, 98);
             convertButton.TabIndex = 2;
             convertButton.TabStop = false;
             convertButton.Text = "Convert";
@@ -135,7 +135,7 @@
             // openFilesButton
             // 
             openFilesButton.Image = (Image)resources.GetObject("openFilesButton.Image");
-            openFilesButton.Location = new Point(554, 259);
+            openFilesButton.Location = new Point(554, 260);
             openFilesButton.Name = "openFilesButton";
             openFilesButton.Size = new Size(112, 34);
             openFilesButton.TabIndex = 3;
@@ -152,14 +152,13 @@
             // 
             // mainPanel
             // 
-            mainPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             mainPanel.Controls.Add(statusLabel);
             mainPanel.Controls.Add(openFilesButton);
             mainPanel.Controls.Add(groupBox1);
             mainPanel.Controls.Add(convertButton);
             mainPanel.Location = new Point(0, 36);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(678, 408);
+            mainPanel.Size = new Size(678, 411);
             mainPanel.TabIndex = 4;
             // 
             // statusLabel
@@ -171,10 +170,11 @@
             statusLabel.TabIndex = 4;
             statusLabel.Text = "Status: Idle";
             // 
-            // mainWindow
+            // MainWindow
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
             ClientSize = new Size(678, 444);
             Controls.Add(mainPanel);
             Controls.Add(menuStrip1);
@@ -184,7 +184,8 @@
             MaximizeBox = false;
             MaximumSize = new Size(700, 500);
             MinimumSize = new Size(700, 500);
-            Name = "mainWindow";
+            Name = "MainWindow";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mass Image to PDF Converter";
             Load += mainWindow_Load;
             menuStrip1.ResumeLayout(false);

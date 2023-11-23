@@ -1,6 +1,6 @@
 ﻿namespace MassImgToPDF
 {
-    partial class settingsWindow
+    partial class SettingsWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             // 
             settingsBox1.Controls.Add(chooseOutputPathButton);
             settingsBox1.Controls.Add(outputPathTextBox);
-            settingsBox1.Location = new Point(14, 13);
+            settingsBox1.Location = new Point(14, 14);
             settingsBox1.Name = "settingsBox1";
             settingsBox1.Size = new Size(654, 78);
             settingsBox1.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             // okSettingsButton
             // 
-            okSettingsButton.Location = new Point(320, 119);
+            okSettingsButton.Location = new Point(320, 118);
             okSettingsButton.Name = "okSettingsButton";
             okSettingsButton.Size = new Size(112, 34);
             okSettingsButton.TabIndex = 1;
@@ -83,7 +83,7 @@
             // 
             // cancelSettingsButton
             // 
-            cancelSettingsButton.Location = new Point(438, 119);
+            cancelSettingsButton.Location = new Point(438, 118);
             cancelSettingsButton.Name = "cancelSettingsButton";
             cancelSettingsButton.Size = new Size(112, 34);
             cancelSettingsButton.TabIndex = 2;
@@ -95,7 +95,7 @@
             // applySettingsButton
             // 
             applySettingsButton.Enabled = false;
-            applySettingsButton.Location = new Point(556, 119);
+            applySettingsButton.Location = new Point(556, 118);
             applySettingsButton.Name = "applySettingsButton";
             applySettingsButton.Size = new Size(112, 34);
             applySettingsButton.TabIndex = 3;
@@ -110,28 +110,28 @@
             // 
             // settingsPanel
             // 
-            settingsPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             settingsPanel.Controls.Add(okSettingsButton);
             settingsPanel.Controls.Add(settingsBox1);
             settingsPanel.Controls.Add(applySettingsButton);
             settingsPanel.Controls.Add(cancelSettingsButton);
-            settingsPanel.Location = new Point(-2, -1);
+            settingsPanel.Location = new Point(-2, -2);
             settingsPanel.Name = "settingsPanel";
-            settingsPanel.Size = new Size(680, 167);
+            settingsPanel.Size = new Size(680, 162);
             settingsPanel.TabIndex = 4;
             // 
-            // settingsWindow
+            // SettingsWindow
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(678, 164);
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoSize = true;
+            ClientSize = new Size(675, 156);
             Controls.Add(settingsPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            MaximumSize = new Size(700, 220);
+            MaximumSize = new Size(697, 212);
             MinimizeBox = false;
-            MinimumSize = new Size(700, 220);
-            Name = "settingsWindow";
+            MinimumSize = new Size(697, 212);
+            Name = "SettingsWindow";
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;

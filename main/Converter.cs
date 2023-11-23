@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-using MassImgToPDF;
+﻿//using System;
+//using System.Collections.Generic;
+//using Microsoft.Extensions.Configuration;
+//using MassImgToPDF;
 using MassImgToPDF.main.settings;
-using iText;
+//using iText;
 using iText.Kernel.Pdf;
 using iText.Layout;
-using iText.Layout.Element;
+//using iText.Layout.Element;
 using iText.IO.Image;
-using System.Diagnostics;
+//using System.Diagnostics;
 
 namespace MassImgToPDF.main
 {
@@ -16,7 +16,8 @@ namespace MassImgToPDF.main
     {
         public static string[] imgFiles = { };
         public static List<string> imgFileShortNames = new List<string>();
-        public static void convertToPDF()
+
+        public static void ConvertToPDF()
         {
             for (int i = 0; i < imgFiles.Length; i++)
             {

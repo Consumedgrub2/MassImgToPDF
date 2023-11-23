@@ -1,18 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
+//using System;
+//using System.Collections.Generic;
+//using System.IO;
 using System.Timers;
-using Microsoft.Extensions.Configuration;
-using MassImgToPDF;
+//using Microsoft.Extensions.Configuration;
+//using MassImgToPDF;
 using MassImgToPDF.main;
-using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
+//using System.Diagnostics;
+//using System.Reflection.Metadata.Ecma335;
 
 namespace MassImgToPDF
 {
-    public partial class mainWindow : Form
+    public partial class MainWindow : Form
     {
-        public mainWindow()
+        public MainWindow()
         {
             InitializeComponent();
         }
@@ -53,17 +53,17 @@ namespace MassImgToPDF
             else
             {
                 statusLabel.Text = "Status: " + Program.programStatus.Busy.ToString();
-                Converter.convertToPDF();
+                Converter.ConvertToPDF();
                 statusLabel.Text = "Status: " + Program.programStatus.Done.ToString();
 
                 System.Timers.Timer timer = new System.Timers.Timer(5000);
 
-                timer.Elapsed += setStatusToIdle;
+                timer.Elapsed += SetStatusToIdle;
                 timer.Start();
             }
         }
 
-        public void setStatusToIdle(object? sender, ElapsedEventArgs e)
+        public void SetStatusToIdle(object? sender, ElapsedEventArgs e)
         {
             //Research this
             statusLabel.Invoke((MethodInvoker)(() =>
@@ -74,13 +74,13 @@ namespace MassImgToPDF
 
         private void menu_barVersion_Click(object sender, EventArgs e)
         {
-            aboutWindow aboutWin = new aboutWindow();
+            AboutWindow aboutWin = new AboutWindow();
             aboutWin.ShowDialog();
         }
 
         private void menu_barSettings_Click(object sender, EventArgs e)
         {
-            settingsWindow settingsWin = new settingsWindow();
+            SettingsWindow settingsWin = new SettingsWindow();
             settingsWin.ShowDialog();
         }
 

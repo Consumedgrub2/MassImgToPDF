@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
-using MassImgToPDF;
+﻿//using System;
+//using System.Collections.Generic;
+//using Microsoft.Extensions.Configuration;
+//using MassImgToPDF;
 
 namespace MassImgToPDF
 {
-    public partial class aboutWindow : Form
+    public partial class AboutWindow : Form
     {
-        public aboutWindow()
+        public AboutWindow()
         {
             InitializeComponent();
         }

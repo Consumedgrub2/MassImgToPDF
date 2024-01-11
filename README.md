@@ -12,7 +12,7 @@ Simply grab a release from the release tab and open the portable exe. As of vers
 I'm tired of professors making me take individual pictures of each homework assignment question (mostly math) and making me individually convert them to pdfs and individually upload them online. Gone are those days.
 
 ### Dependencies 
-If you clone the repo, all dependencies through NuGet are in included in the solution. Some dependencies may be on a different license from the MIT license of this software.
+If you clone the repo, all dependencies through NuGet are in included in the solution. Some dependencies may be on a different license from the AGPLv3 license of this software.
 
 - ```iText7``` is licensed under AGPLv3.
 - ```Microsoft Configuration Extensions``` is licensed under MIT.
